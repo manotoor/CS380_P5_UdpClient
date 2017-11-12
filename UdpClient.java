@@ -11,6 +11,16 @@ public class UdpClient{
 			System.out.println("Connected to Server.");
 			Inputstream is = socket.getInputStream();
 			OutputStream os = socket.getOutputStream();
+			//Get destination address (should be 18,221,102,182)
+			byte[] destinationAddress = socket.getInetAddress().getAddress();
+			//Send handshake message (hard code dead beef IPv4 and protocol UDP)
+			//get response
+			//if response good we are still connected so read new port
+			//send 12 packets
+				//Create Udp Packet
+				//Calculate RTT
+				//Read server response
+			//Get average RTT of all responses
 
 		}
 		System.out.println("Disconnected from Server.");
@@ -18,4 +28,9 @@ public class UdpClient{
 			System.out.println("Sorry something went wrong!");
 		}
 	}
+	//Handshake function
+	//Add checksum function
+	//add IPv4 function
+	//Pseudo header function
+	//UDP Packet function
 }
